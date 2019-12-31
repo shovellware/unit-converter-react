@@ -1,20 +1,26 @@
-import React, {useState} from 'react';
-import { TextField, Stack, DefaultButton } from 'office-ui-fabric-react';
-import style from '../Styles/temp.module.css';
+import React, {useState, useEffect} from 'react';
+import { Stack, DefaultButton } from 'office-ui-fabric-react';
+import Fahrenheit from './Fahrenheit.jsx';
+import Celsius from './Celsius.jsx';
 
 const Temperature = () =>{
 
     const [fahrenheit, setFahrenheit] = useState('');
     const [celsius, setCelsius] = useState('');
 
-    const updateFahBox = e =>{
-        setFahrenheit(e.target.value);
-        setCelsius((e.target.value - 32) * 5 /9);
+    useEffect(() =>{
+        if(fahrenheit === ''){ setCelsius('') };
+        if(celsius === ''){ setFahrenheit('') };
+    }, [fahrenheit, celsius]);
+
+    const fahrenheitChange = e =>{
+        setFahrenheit(e);
+        setCelsius((e - 32) * 5 /9);
     };
 
-    const updateCelBox = e =>{
-        setCelsius(e.target.value);
-        setFahrenheit(e.target.value * (9/5) + 32);  
+    const celsiusChange = e =>{
+        setCelsius(e);
+        setFahrenheit(e * (9/5) + 32);
     };
 
     const clearButton = () =>{
@@ -23,10 +29,14 @@ const Temperature = () =>{
     }
 
     return(
-        <div class="ms-Grid-col ms-sm12 ms-lg4">
-            <Stack horizontal tokens={{ childrenGap: 15 }} >
-            <TextField placeholder="0.00" label="Fahrenheit" value={fahrenheit} onChange={updateFahBox}/>
-            <TextField placeholder="0.00" label="Celsius" value={celsius} onChange={updateCelBox}/>
+        <div className="ms-Grid-col ms-sm12 ms-lg4">
+            <Stack horizontal tokens={{ childrenGap: 10 }} >
+            <Fahrenheit 
+                fahValue={fahrenheit}
+                onTemperatureChange={fahrenheitChange}/>
+            <Celsius 
+                celValue={celsius}
+                onTemperatureChange={celsiusChange}/>
             </Stack>
             <DefaultButton onClick={clearButton} text="Clear" allowDisabledFocus />
         </div>        
