@@ -2,4 +2,4 @@
 A tool to convert values among commonly used scales.
 
 create-react-app
-office-ui-fabric-react
+office-ui-fabric-reactgit stat
