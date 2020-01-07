@@ -8,7 +8,7 @@ const Temperature = () =>{
     const [fahrenheit, setFahrenheit] = useState('');
     const [celsius, setCelsius] = useState('');
 
-    useEffect(() =>{
+    useEffect(() => {
         if(fahrenheit === ''){ setCelsius('') };
         if(celsius === ''){ setFahrenheit('') };
     }, [fahrenheit, celsius]);
