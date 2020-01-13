@@ -30,6 +30,7 @@ const Temperature = () => {
   return (
     <div className="ms-Grid">
       <div className="ms-Grid-row">
+        <div className="ms-Grid-col ms-sm8">
         <Stack horizontal tokens={{ childrenGap: 10 }}>
           <Fahrenheit
             fahValue={fahrenheit}
@@ -40,8 +41,9 @@ const Temperature = () => {
             onTemperatureChange={celsiusChange}
           />
         </Stack>
+        <DefaultButton style={{marginTop: '5px'}} onClick={clearButton} text="Clear" allowDisabledFocus />
+        </div>
       </div>
-      <DefaultButton onClick={clearButton} text="Clear" allowDisabledFocus />
     </div>
   );
 };
