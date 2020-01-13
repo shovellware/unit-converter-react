@@ -5,3 +5,8 @@
   align-items: center;
   border: 20px;
 }
+
+.Temperature {
+  display: flex;
+  height: 100px;
+}

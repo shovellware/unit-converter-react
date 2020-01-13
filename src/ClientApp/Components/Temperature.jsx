@@ -28,17 +28,19 @@ const Temperature = () => {
   };
 
   return (
-    <div>
-      <Stack horizontal tokens={{ childrenGap: 10 }}>
-        <Fahrenheit
-          fahValue={fahrenheit}
-          onTemperatureChange={fahrenheitChange}
-        />
-        <Celsius
-          celValue={celsius}
-          onTemperatureChange={celsiusChange}
-        />
-      </Stack>
+    <div className="ms-Grid">
+      <div className="ms-Grid-row">
+        <Stack horizontal tokens={{ childrenGap: 10 }}>
+          <Fahrenheit
+            fahValue={fahrenheit}
+            onTemperatureChange={fahrenheitChange}
+          />
+          <Celsius
+            celValue={celsius}
+            onTemperatureChange={celsiusChange}
+          />
+        </Stack>
+      </div>
       <DefaultButton onClick={clearButton} text="Clear" allowDisabledFocus />
     </div>
   );

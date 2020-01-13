@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Stack, DefaultButton } from 'office-ui-fabric-react';
 import Pounds from './Pounds';
-import Kiligrams from './Kilograms';
+import Kilograms from './Kilograms';
 
 
 const Weight = () => {
@@ -11,13 +11,15 @@ const Weight = () => {
 
 
     return (
-        <div>
+        <div className="ms-Grid">
+            <div className="ms-Grid-row">
             <Stack horizontal tokens={{ childrenGap: 10}}>
                 <Pounds />
-                <Kiligrams />
+                <Kilograms />
             </Stack>
+            </div>
         </div>
-    )
-}
+    );
+};
 
 export default Weight;
