@@ -1,4 +1,7 @@
 .App {
-  text-align: center;
-  border: 10px;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  border: 20px;
 }

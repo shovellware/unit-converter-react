@@ -7,12 +7,12 @@ const Fahrenheit = ({fahValue, onTemperatureChange}) =>{
     };
 
     return(
-        <div className="fahrenheit">
-            <TextField 
-                placeholder="0.00" 
-                label="Fahrenheit" 
-                value={fahValue} 
-                onChange={handleChange}/>
+        <div className="ms-Grid">
+           <TextField 
+            placeholder="0.00" 
+            label="Fahrenheit" 
+            value={fahValue} 
+            onChange={handleChange}/>
         </div>
     );
 }
