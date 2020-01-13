@@ -12,12 +12,15 @@ const Weight = () => {
 
     return (
         <div className="ms-Grid">
-            <div className="ms-Grid-row">
-            <Stack horizontal tokens={{ childrenGap: 10}}>
+          <div className="ms-Grid-row">
+            <div className="ms-Grid-col">
+                <Stack horizontal tokens={{ childrenGap: 10}}>
                 <Pounds />
                 <Kilograms />
-            </Stack>
+                </Stack>
+                <DefaultButton style={{marginTop: '5px'}} text='Clear' />
             </div>
+          </div>
         </div>
     );
 };

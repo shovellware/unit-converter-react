@@ -5,3 +5,11 @@
   align-items: center;
   border: 20px;
 }
+
+.converter-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: aqua;
+}
