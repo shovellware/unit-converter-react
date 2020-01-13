@@ -28,7 +28,7 @@ const Temperature = () => {
   };
 
   return (
-    <div className="ms-Grid-col ms-sm12 ms-lg4">
+    <div>
       <Stack horizontal tokens={{ childrenGap: 10 }}>
         <Fahrenheit
           fahValue={fahrenheit}
