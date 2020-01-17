@@ -1,3 +1,5 @@
+/* eslint-disable no-mixed-operators */
+/* eslint-disable import/extensions */
 import React, { useState, useEffect } from 'react';
 import { Stack, DefaultButton } from 'office-ui-fabric-react';
 import Fahrenheit from './Fahrenheit.jsx';
@@ -31,17 +33,17 @@ const Temperature = () => {
     <div className="ms-Grid">
       <div className="ms-Grid-row">
         <div className="ms-Grid-col ms-sm8">
-        <Stack horizontal tokens={{ childrenGap: 10 }}>
-          <Fahrenheit
-            fahValue={fahrenheit}
-            onTemperatureChange={fahrenheitChange}
-          />
-          <Celsius
-            celValue={celsius}
-            onTemperatureChange={celsiusChange}
-          />
-        </Stack>
-        <DefaultButton style={{marginTop: '5px'}} onClick={clearButton} text="Clear" allowDisabledFocus />
+          <Stack horizontal tokens={{ childrenGap: 10 }}>
+            <Fahrenheit
+              fahValue={fahrenheit}
+              onTemperatureChange={fahrenheitChange}
+            />
+            <Celsius
+              celValue={celsius}
+              onTemperatureChange={celsiusChange}
+            />
+          </Stack>
+          <DefaultButton style={{ marginTop: '5px' }} onClick={clearButton} text="Clear" allowDisabledFocus />
         </div>
       </div>
     </div>
